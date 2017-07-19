@@ -152,7 +152,7 @@
   * required style string The new UI style.
  **/
 /datum/tgui/proc/set_style(style)
-	src.style = lowertext(style)
+	src.style = rlowertext(style)
 
  /**
   * public
@@ -162,7 +162,7 @@
   * required interface string The new UI interface.
  **/
 /datum/tgui/proc/set_interface(interface)
-	src.interface = lowertext(interface)
+	src.interface = rlowertext(interface)
 
  /**
   * public

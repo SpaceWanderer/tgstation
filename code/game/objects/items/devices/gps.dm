@@ -100,7 +100,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 		if(pos.z == curr.z) //Distance/Direction calculations for same z-level only
 			signal["dist"] = max(get_dist(curr, pos), 0) //Distance between the src and remote GPS turfs
 			signal["degrees"] = round(Get_Angle(curr, pos)) //0-360 degree directional bearing, for more precision.
-			var/direction = uppertext(dir2text(get_dir(curr, pos))) //Direction text (East, etc). Not as precise, but still helpful.
+			var/direction = ruppertext(dir2text(get_dir(curr, pos))) //Direction text (East, etc). Not as precise, but still helpful.
 			if(!direction)
 				direction = "CENTER"
 				signal["degrees"] = "N/A"
@@ -135,7 +135,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	..()
 	if(href_list["tag"] )
 		var/a = input("Please enter desired tag.", name, gpstag) as text
-		a = uppertext(copytext(sanitize(a), 1, 5))
+		a = ruppertext(copytext(sanitize(a), 1, 5))
 		if(in_range(src, usr))
 			gpstag = a
 			name = "global positioning system ([gpstag])"

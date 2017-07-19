@@ -129,7 +129,7 @@
 	var/message_say = "FOR NO RAISIN!"
 	if(user.mind)
 		if(user.mind.special_role)
-			var/role = lowertext(user.mind.special_role)
+			var/role = rlowertext(user.mind.special_role)
 			if(role == "traitor" || role == "syndicate")
 				message_say = "FOR THE SYNDICATE!"
 			else if(role == "changeling")
@@ -139,7 +139,7 @@
 			else if(role == "revolutionary" || role == "head revolutionary")
 				message_say = "VIVA LA REVOLUTION!"
 			else if(user.mind.gang_datum)
-				message_say = "[uppertext(user.mind.gang_datum.name)] RULES!"
+				message_say = "[ruppertext(user.mind.gang_datum.name)] RULES!"
 	user.say(message_say)
 	explosion(user,0,2,0) //Cheap explosion imitation because putting prime() here causes runtimes
 	user.gib(1, 1)
@@ -184,7 +184,7 @@
 	var/message_say = "FOR NO RAISIN!"
 	if(user.mind)
 		if(user.mind.special_role)
-			var/role = lowertext(user.mind.special_role)
+			var/role = rlowertext(user.mind.special_role)
 			if(role == "traitor" || role == "syndicate")
 				message_say = "FOR THE SYNDICATE!"
 			else if(role == "changeling")
@@ -194,7 +194,7 @@
 			else if(role == "revolutionary" || role == "head revolutionary")
 				message_say = "VIVA LA REVOLUTION!"
 			else if(user.mind.gang_datum)
-				message_say = "[uppertext(user.mind.gang_datum.name)] RULES!"
+				message_say = "[ruppertext(user.mind.gang_datum.name)] RULES!"
 	user.say(message_say)
 	target = user
 	message_admins("[ADMIN_LOOKUPFLW(user)] suicided with [name] at [ADMIN_COORDJMP(src)]",0,1)

@@ -25,7 +25,7 @@
 	var/a = pick("gently stroke", "nuzzle", "affectionatly pet", "cuddle")
 	M.visible_message("<span class='notice'>[M] [a]s [src]!</span>", "<span class='notice'>You [a] [src]!</span>")
 	playsound(src, 'sound/effects/blobattack.ogg', 50, 1) //SQUISH SQUISH
-	
+
 
 
 /obj/structure/blob/Initialize()
@@ -250,7 +250,7 @@
 		to_chat(user, "<b>No Material Detected!</b><br>")
 
 /obj/structure/blob/proc/typereport(mob/user)
-	to_chat(user, "<b>Blob Type:</b> <span class='notice'>[uppertext(initial(name))]</span>")
+	to_chat(user, "<b>Blob Type:</b> <span class='notice'>[ruppertext(initial(name))]</span>")
 	to_chat(user, "<b>Health:</b> <span class='notice'>[obj_integrity]/[max_integrity]</span>")
 	to_chat(user, "<b>Effects:</b> <span class='notice'>[scannerreport()]</span>")
 

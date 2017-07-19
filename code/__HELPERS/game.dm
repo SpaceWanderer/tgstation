@@ -308,7 +308,7 @@
 
 /proc/get_mob_by_key(key)
 	for(var/mob/M in GLOB.mob_list)
-		if(M.ckey == lowertext(key))
+		if(M.ckey == rlowertext(key))
 			return M
 	return null
 

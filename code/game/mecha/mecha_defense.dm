@@ -284,7 +284,7 @@
 		return 0
 	use_power(melee_energy_drain)
 	if(M.damtype == BRUTE || M.damtype == BURN)
-		add_logs(M.occupant, src, "attacked", M, "(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
+		add_logs(M.occupant, src, "attacked", M, "(INTENT: [ruppertext(M.occupant.a_intent)]) (DAMTYPE: [ruppertext(M.damtype)])")
 		. = ..()
 
 /obj/mecha/proc/full_repair(charge_cell)

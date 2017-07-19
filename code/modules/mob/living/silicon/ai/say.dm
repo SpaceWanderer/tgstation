@@ -7,7 +7,7 @@
 /mob/living/silicon/ai/compose_track_href(atom/movable/speaker, namepart)
 	var/mob/M = speaker.GetSource()
 	if(M)
-		return "<a href='?src=\ref[src];track=[html_encode(namepart)]'>"
+		return "<a href='?src=\ref[src];track=[rhtml_encode(namepart)]'>"
 	return ""
 
 /mob/living/silicon/ai/compose_job(atom/movable/speaker, message_langs, raw_message, radio_freq)
@@ -119,7 +119,7 @@
 		words.len = 30
 
 	for(var/word in words)
-		word = lowertext(trim(word))
+		word = rlowertext(trim(word))
 		if(!word)
 			words -= word
 			continue
@@ -148,7 +148,7 @@
 
 /proc/play_vox_word(word, z_level, mob/only_listener)
 
-	word = lowertext(word)
+	word = rlowertext(word)
 
 	if(GLOB.vox_sounds[word])
 

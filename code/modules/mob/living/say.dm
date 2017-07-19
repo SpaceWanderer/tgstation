@@ -300,7 +300,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	else if(key == "#")
 		return MODE_WHISPER
 	else if(length(message) > 2 && (key in GLOB.department_radio_prefixes))
-		var/key_symbol = lowertext(copytext(message, 2, 3))
+		var/key_symbol = rlowertext(copytext(message, 2, 3))
 		return GLOB.department_radio_keys[key_symbol]
 
 /mob/living/proc/get_message_language(message)

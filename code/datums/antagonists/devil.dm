@@ -117,15 +117,15 @@ GLOBAL_LIST_INIT(devil_suffix, list(" the Red", " the Soulless", " the Master", 
 	bane = randomdevilbane()
 	obligation = randomdevilobligation()
 	banish = randomdevilbanish()
-	GLOB.allDevils[lowertext(truename)] = src
+	GLOB.allDevils[rlowertext(truename)] = src
 
 
 /proc/devilInfo(name)
-	if(GLOB.allDevils[lowertext(name)])
-		return GLOB.allDevils[lowertext(name)]
+	if(GLOB.allDevils[rlowertext(name)])
+		return GLOB.allDevils[rlowertext(name)]
 	else
 		var/datum/fakeDevil/devil = new /datum/fakeDevil(name)
-		GLOB.allDevils[lowertext(name)] = devil
+		GLOB.allDevils[rlowertext(name)] = devil
 		return devil
 
 /proc/randomDevilName()

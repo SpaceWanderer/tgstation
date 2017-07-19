@@ -52,7 +52,7 @@
 		var/Y = rand(Floor(syllable_count/syllable_divisor), syllable_count)
 		for(var/x in Y to 0)
 			new_name += pick(syllables)
-		full_name += " [capitalize(lowertext(new_name))]"
+		full_name += " [capitalize(rlowertext(new_name))]"
 
 	return "[trim(full_name)]"
 
