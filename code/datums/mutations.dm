@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(mutations_list)
 
 /datum/mutation/human/hulk/say_mod(message)
 	if(message)
-		message = "[uppertext(replacetext(message, ".", "!"))]!!"
+		message = "[ruppertext(replacetext(message, ".", "!"))]!!"
 	return message
 
 /datum/mutation/human/telekinesis
@@ -524,7 +524,7 @@ GLOBAL_LIST_EMPTY(mutations_list)
 				suffix = copytext(cword,length(cword)-1,length(cword)  )
 			if(length(cword))
 				rearranged += cword
-		message = "[prefix][uppertext(jointext(rearranged," "))]!!"
+		message = "[prefix][ruppertext(jointext(rearranged," "))]!!"
 	return message
 
 /datum/mutation/human/swedish

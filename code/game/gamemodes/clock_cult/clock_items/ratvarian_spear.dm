@@ -87,7 +87,7 @@
 				M.adjustFireLoss(15) //total 30 damage on cultists
 		else
 			target.adjustFireLoss(3) //anything else takes a total of 18
-	add_logs(user, target, "attacked", src.name, "(INTENT: [uppertext(user.a_intent)]) (DAMTYPE: [uppertext(damtype)])")
+	add_logs(user, target, "attacked", src.name, "(INTENT: [ruppertext(user.a_intent)]) (DAMTYPE: [ruppertext(damtype)])")
 	add_fingerprint(user)
 
 	attack_verb = list("stabbed", "poked", "slashed")

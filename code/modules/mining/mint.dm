@@ -50,7 +50,7 @@
 
 	var/datum/material/M = materials.materials[chosen]
 
-	dat += "<br><br>Will produce [coinsToProduce] [lowertext(M.name)] coins if enough materials are available.<br>"
+	dat += "<br><br>Will produce [coinsToProduce] [rlowertext(M.name)] coins if enough materials are available.<br>"
 	dat += "<A href='?src=\ref[src];chooseAmt=-10'>-10</A> "
 	dat += "<A href='?src=\ref[src];chooseAmt=-5'>-5</A> "
 	dat += "<A href='?src=\ref[src];chooseAmt=-1'>-1</A> "

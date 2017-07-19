@@ -391,7 +391,7 @@
 		/** REVOLUTION ***/
 		text = "revolution"
 		if (SSticker.mode.config_tag=="revolution")
-			text = uppertext(text)
+			text = ruppertext(text)
 		text = "<i><b>[text]</b></i>: "
 		if (assigned_role in GLOB.command_positions)
 			text += "<b>HEAD</b>|loyal|employee|headrev|rev"
@@ -429,7 +429,7 @@
 		/** GANG ***/
 		text = "gang"
 		if (SSticker.mode.config_tag=="gang")
-			text = uppertext(text)
+			text = ruppertext(text)
 		text = "<i><b>[text]</b></i>: "
 		text += "[current.isloyal() ? "<B>LOYAL</B>" : "loyal"]|"
 		if(src in SSticker.mode.get_all_gangsters())
@@ -469,7 +469,7 @@
 		/** Abductors **/
 		text = "Abductor"
 		if(SSticker.mode.config_tag == "abductor")
-			text = uppertext(text)
+			text = ruppertext(text)
 		text = "<i><b>[text]</b></i>: "
 		if(src in SSticker.mode.abductors)
 			text += "<b>Abductor</b>|<a href='?src=\ref[src];abductor=clear'>human</a>"
@@ -487,7 +487,7 @@
 		/** NUCLEAR ***/
 		text = "nuclear"
 		if (SSticker.mode.config_tag=="nuclear")
-			text = uppertext(text)
+			text = ruppertext(text)
 		text = "<i><b>[text]</b></i>: "
 		if (src in SSticker.mode.syndicates)
 			text += "<b>OPERATIVE</b>|<a href='?src=\ref[src];nuclear=clear'>nanotrasen</a>"
@@ -512,7 +512,7 @@
 		/** WIZARD ***/
 		text = "wizard"
 		if (SSticker.mode.config_tag=="wizard")
-			text = uppertext(text)
+			text = ruppertext(text)
 		text = "<i><b>[text]</b></i>: "
 		if ((src in SSticker.mode.wizards) || (src in SSticker.mode.apprentices))
 			text += "<b>YES</b>|<a href='?src=\ref[src];wizard=clear'>no</a>"
@@ -532,7 +532,7 @@
 	/** CULT ***/
 	text = "cult"
 	if (SSticker.mode.config_tag=="cult")
-		text = uppertext(text)
+		text = ruppertext(text)
 	text = "<i><b>[text]</b></i>: "
 	if(iscultist(current))
 		text += "loyal|<a href='?src=\ref[src];cult=clear'>employee</a>|<b>CULTIST</b>"
@@ -555,7 +555,7 @@
 	/** CLOCKWORK CULT **/
 	text = "clockwork cult"
 	if(SSticker.mode.config_tag == "clockwork cult")
-		text = uppertext(text)
+		text = ruppertext(text)
 	text = "<i><b>[text]</b></i>: "
 	if(is_servant_of_ratvar(current))
 		text += "loyal|<a href='?src=\ref[src];clockcult=clear'>employee</a>|<b>SERVANT</b>"
@@ -577,7 +577,7 @@
 	/** TRAITOR ***/
 	text = "traitor"
 	if (SSticker.mode.config_tag=="traitor" || SSticker.mode.config_tag=="traitorchan")
-		text = uppertext(text)
+		text = ruppertext(text)
 	text = "<i><b>[text]</b></i>: "
 	if (src in SSticker.mode.traitors)
 		text += "<b>TRAITOR</b>|<a href='?src=\ref[src];traitor=clear'>loyal</a>"
@@ -598,7 +598,7 @@
 		/** CHANGELING ***/
 		text = "changeling"
 		if (SSticker.mode.config_tag=="changeling" || SSticker.mode.config_tag=="traitorchan")
-			text = uppertext(text)
+			text = ruppertext(text)
 		text = "<i><b>[text]</b></i>: "
 		if ((src in SSticker.mode.changelings) && special_role)
 			text += "<b>YES</b>|<a href='?src=\ref[src];changeling=clear'>no</a>"
@@ -625,7 +625,7 @@
 		/** MONKEY ***/
 		text = "monkey"
 		if (SSticker.mode.config_tag=="monkey")
-			text = uppertext(text)
+			text = ruppertext(text)
 		text = "<i><b>[text]</b></i>: "
 		if (ishuman(current))
 			text += "<a href='?src=\ref[src];monkey=healthy'>healthy</a>|<a href='?src=\ref[src];monkey=infected'>infected</a>|<b>HUMAN</b>|other"
@@ -653,7 +653,7 @@
 	/** devil ***/
 	text = "devil"
 	if(SSticker.mode.config_tag == "devil")
-		text = uppertext(text)
+		text = ruppertext(text)
 	text = "<i><b>[text]</b></i>: "
 	var/datum/antagonist/devil/devilinfo = has_antag_datum(ANTAG_DATUM_DEVIL)
 	if(devilinfo)
@@ -675,7 +675,7 @@
 /** NINJA ***/
 	text = "ninja"
 	if(SSticker.mode.config_tag == "ninja")
-		text = uppertext(text)
+		text = ruppertext(text)
 	text = "<i><b>[text]</b></i>: "
 	var/datum/antagonist/ninja/ninjainfo = has_antag_datum(ANTAG_DATUM_NINJA)
 	if(ninjainfo)

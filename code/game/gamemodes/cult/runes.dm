@@ -57,7 +57,7 @@ To draw a rune, use an arcane tome.
 
 /obj/effect/rune/attackby(obj/I, mob/user, params)
 	if(istype(I, /obj/item/weapon/tome) && iscultist(user))
-		to_chat(user, "<span class='notice'>You carefully erase the [lowertext(cultist_name)] rune.</span>")
+		to_chat(user, "<span class='notice'>You carefully erase the [rlowertext(cultist_name)] rune.</span>")
 		qdel(src)
 	else if(istype(I, /obj/item/weapon/nullrod))
 		user.say("BEGONE FOUL MAGIKS!!")

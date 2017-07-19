@@ -89,7 +89,7 @@
 		return null
 
 /datum/SDQL_parser/proc/tokenl(i)
-	return lowertext(token(i))
+	return rlowertext(token(i))
 
 
 //query:	select_query | delete_query | update_query
@@ -427,7 +427,7 @@
 	if(token(i) == "null")
 		node += "null"
 		i++
-	else if(lowertext(copytext(token(i),1,3)) == "0x" && isnum(hex2num(copytext(token(i),3))))
+	else if(rlowertext(copytext(token(i),1,3)) == "0x" && isnum(hex2num(copytext(token(i),3))))
 		node += hex2num(copytext(token(i),3))
 		i++
 	else if(isnum(text2num(token(i))))

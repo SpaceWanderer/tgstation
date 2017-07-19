@@ -245,7 +245,7 @@ This file contains the arcane tome files.
 			qdel(S)
 	var/obj/effect/rune/R = new rune_to_scribe(Turf, chosen_keyword)
 	R.add_mob_blood(user)
-	to_chat(user, "<span class='cult'>The [lowertext(R.cultist_name)] rune [R.cultist_desc]</span>")
+	to_chat(user, "<span class='cult'>The [rlowertext(R.cultist_name)] rune [R.cultist_desc]</span>")
 	SSblackbox.add_details("cult_runes_scribed", R.cultist_name)
 
 /obj/item/weapon/tome/proc/check_rune_turf(turf/T, mob/user)

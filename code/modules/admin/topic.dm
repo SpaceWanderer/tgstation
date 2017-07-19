@@ -2256,7 +2256,7 @@
 		thing_to_check = splittext(thing_to_check, ", ")
 
 
-		var/list/dat = list("Related accounts by [uppertext(href_list["showrelatedacc"])]:")
+		var/list/dat = list("Related accounts by [ruppertext(href_list["showrelatedacc"])]:")
 		dat += thing_to_check
 
 		usr << browse(dat.Join("<br>"), "window=related_[C];size=420x300")

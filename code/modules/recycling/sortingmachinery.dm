@@ -27,7 +27,7 @@
 		var/obj/item/device/destTagger/O = W
 
 		if(sortTag != O.currTag)
-			var/tag = uppertext(GLOB.TAGGERLOCATIONS[O.currTag])
+			var/tag = ruppertext(GLOB.TAGGERLOCATIONS[O.currTag])
 			to_chat(user, "<span class='notice'>*[tag]*</span>")
 			sortTag = O.currTag
 			playsound(loc, 'sound/machines/twobeep.ogg', 100, 1)
@@ -108,7 +108,7 @@
 		var/obj/item/device/destTagger/O = W
 
 		if(sortTag != O.currTag)
-			var/tag = uppertext(GLOB.TAGGERLOCATIONS[O.currTag])
+			var/tag = ruppertext(GLOB.TAGGERLOCATIONS[O.currTag])
 			to_chat(user, "<span class='notice'>*[tag]*</span>")
 			sortTag = O.currTag
 			playsound(loc, 'sound/machines/twobeep.ogg', 100, 1)

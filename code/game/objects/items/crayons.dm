@@ -235,7 +235,7 @@
 	update_icon()
 
 /obj/item/toy/crayon/proc/crayon_text_strip(text)
-	var/list/base = string2charlist(lowertext(text))
+	var/list/base = string2charlist(rlowertext(text))
 	var/list/out = list()
 	for(var/a in base)
 		if(a in (letters|numerals))

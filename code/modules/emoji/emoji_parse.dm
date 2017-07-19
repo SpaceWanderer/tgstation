@@ -14,7 +14,7 @@
 			pos = search
 			search = findtext(text, ":", pos+1)
 			if(search)
-				emoji = lowertext(copytext(text, pos+1, search))
+				emoji = rlowertext(copytext(text, pos+1, search))
 				if(emoji in emojis)
 					parsed += bicon(icon('icons/emoji.dmi', emoji))
 					pos = search + 1

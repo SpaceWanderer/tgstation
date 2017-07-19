@@ -105,7 +105,7 @@ GLOBAL_VAR_INIT(security_level, 0)
 			return "delta"
 
 /proc/seclevel2num(seclevel)
-	switch( lowertext(seclevel) )
+	switch( rlowertext(seclevel) )
 		if("green")
 			return SEC_LEVEL_GREEN
 		if("blue")

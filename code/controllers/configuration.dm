@@ -315,10 +315,10 @@
 		var/value = null
 
 		if(pos)
-			name = lowertext(copytext(t, 1, pos))
+			name = rlowertext(copytext(t, 1, pos))
 			value = copytext(t, pos + 1)
 		else
-			name = lowertext(t)
+			name = rlowertext(t)
 
 		if(!name)
 			continue
@@ -607,13 +607,13 @@
 				if("gateway_delay")
 					gateway_delay			= text2num(value)
 				if("continuous")
-					var/mode_name = lowertext(value)
+					var/mode_name = rlowertext(value)
 					if(mode_name in modes)
 						continuous[mode_name] = 1
 					else
 						GLOB.config_error_log << "Unknown continuous configuration definition: [mode_name]."
 				if("midround_antag")
-					var/mode_name = lowertext(value)
+					var/mode_name = rlowertext(value)
 					if(mode_name in modes)
 						midround_antag[mode_name] = 1
 					else
@@ -628,7 +628,7 @@
 					var/mode_value = null
 
 					if(pop_pos)
-						mode_name = lowertext(copytext(value, 1, pop_pos))
+						mode_name = rlowertext(copytext(value, 1, pop_pos))
 						mode_value = copytext(value, pop_pos + 1)
 						if(mode_name in modes)
 							min_pop[mode_name] = text2num(mode_value)
@@ -642,7 +642,7 @@
 					var/mode_value = null
 
 					if(pop_pos)
-						mode_name = lowertext(copytext(value, 1, pop_pos))
+						mode_name = rlowertext(copytext(value, 1, pop_pos))
 						mode_value = copytext(value, pop_pos + 1)
 						if(mode_name in modes)
 							max_pop[mode_name] = text2num(mode_value)
@@ -672,7 +672,7 @@
 					var/prob_value = null
 
 					if(prob_pos)
-						prob_name = lowertext(copytext(value, 1, prob_pos))
+						prob_name = rlowertext(copytext(value, 1, prob_pos))
 						prob_value = copytext(value, prob_pos + 1)
 						if(prob_name in modes)
 							probabilities[prob_name] = text2num(prob_value)
@@ -720,7 +720,7 @@
 				if("default_laws")
 					default_laws				= text2num(value)
 				if("random_laws")
-					var/law_id = lowertext(value)
+					var/law_id = rlowertext(value)
 					lawids += law_id
 				if("law_weight")
 					// Value is in the form "LAWID,NUMBER"
@@ -737,7 +737,7 @@
 				if("join_with_mutant_race")
 					mutant_races				= 1
 				if("roundstart_races")
-					var/race_id = lowertext(value)
+					var/race_id = rlowertext(value)
 					for(var/species_id in GLOB.species_list)
 						if(species_id == race_id)
 							roundstart_races += GLOB.species_list[species_id]
@@ -809,10 +809,10 @@
 		var/data = null
 
 		if(pos)
-			command = lowertext(copytext(t, 1, pos))
+			command = rlowertext(copytext(t, 1, pos))
 			data = copytext(t, pos + 1)
 		else
-			command = lowertext(t)
+			command = rlowertext(t)
 
 		if(!command)
 			continue
@@ -859,10 +859,10 @@
 		var/value = null
 
 		if(pos)
-			name = lowertext(copytext(t, 1, pos))
+			name = rlowertext(copytext(t, 1, pos))
 			value = copytext(t, pos + 1)
 		else
-			name = lowertext(t)
+			name = rlowertext(t)
 
 		if(!name)
 			continue

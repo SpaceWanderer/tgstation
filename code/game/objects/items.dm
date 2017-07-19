@@ -498,7 +498,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	else
 		M.take_bodypart_damage(7)
 
-	add_logs(user, M, "attacked", "[src.name]", "(INTENT: [uppertext(user.a_intent)])")
+	add_logs(user, M, "attacked", "[src.name]", "(INTENT: [ruppertext(user.a_intent)])")
 
 	M.adjust_blurriness(3)
 	M.adjust_eye_damage(rand(2,4))

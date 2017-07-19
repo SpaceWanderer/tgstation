@@ -112,7 +112,7 @@
 	return TRUE
 
 /obj/item/organ/vocal_cords/colossus/handle_speech(message)
-	owner.say(uppertext(message), spans = spans, sanitize = FALSE)
+	owner.say(ruppertext(message), spans = spans, sanitize = FALSE)
 	playsound(get_turf(owner), 'sound/magic/clockwork/invoke_general.ogg', 300, 1, 5)
 	return //voice of god speaks for us
 
@@ -130,7 +130,7 @@
 	if(!user || !user.can_speak() || user.stat)
 		return 0 //no cooldown
 
-	var/log_message = uppertext(message)
+	var/log_message = ruppertext(message)
 	if(!span_list || !span_list.len)
 		if(iscultist(user))
 			span_list = list("narsiesmall")
@@ -139,7 +139,7 @@
 		else
 			span_list = list()
 
-	message = lowertext(message)
+	message = rlowertext(message)
 	var/mob/living/list/listeners = list()
 	for(var/mob/living/L in get_hearers_in_view(8, user))
 		if(L.can_hear() && !L.null_rod_check() && L != user && L.stat != DEAD)
