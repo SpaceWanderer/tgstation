@@ -485,7 +485,7 @@
 		if(!check_rights(0))
 			return
 
-		var/mob/M = locate(href_list["mob_player_panel"]) in GLOB.mob_list
+		var/mob/M = locate(href_list["mob_player_panel"])
 		if(!istype(M))
 			to_chat(usr, "This can only be used on instances of type /mob")
 			return
@@ -497,7 +497,7 @@
 		if(!check_rights(R_ADMIN))
 			return
 
-		var/mob/M = locate(href_list["godmode"]) in GLOB.mob_list
+		var/mob/M = locate(href_list["godmode"])
 		if(!istype(M))
 			to_chat(usr, "This can only be used on instances of type /mob")
 			return
@@ -540,7 +540,7 @@
 		if(!check_rights(0))
 			return
 
-		var/mob/M = locate(href_list["regenerateicons"]) in GLOB.mob_list
+		var/mob/M = locate(href_list["regenerateicons"])
 		if(!ismob(M))
 			to_chat(usr, "This can only be done to instances of type /mob")
 			return
@@ -557,7 +557,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/M = locate(href_list["rename"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["rename"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -705,7 +705,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/M = locate(href_list["give_spell"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["give_spell"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -717,7 +717,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/M = locate(href_list["remove_spell"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["remove_spell"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -729,7 +729,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/M = locate(href_list["give_disease"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["give_disease"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -741,7 +741,7 @@
 			if(!check_rights(R_FUN))
 				return
 
-			var/mob/M = locate(href_list["gib"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["gib"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -752,7 +752,7 @@
 			if(!check_rights(R_BUILDMODE))
 				return
 
-			var/mob/M = locate(href_list["build_mode"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["build_mode"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -764,7 +764,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/M = locate(href_list["drop_everything"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["drop_everything"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -776,7 +776,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/M = locate(href_list["direct_control"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["direct_control"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -788,7 +788,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/M = locate(href_list["offer_control"]) in GLOB.mob_list
+			var/mob/M = locate(href_list["offer_control"])
 			if(!istype(M))
 				to_chat(usr, "This can only be used on instances of type /mob")
 				return
@@ -921,7 +921,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/living/carbon/C = locate(href_list["editorgans"]) in GLOB.mob_list
+			var/mob/living/carbon/C = locate(href_list["editorgans"])
 			if(!istype(C))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon")
 				return
@@ -933,7 +933,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/monkey/Mo = locate(href_list["makehuman"]) in GLOB.mob_list
+			var/mob/living/carbon/monkey/Mo = locate(href_list["makehuman"])
 			if(!istype(Mo))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/monkey")
 				return
@@ -949,7 +949,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/human/H = locate(href_list["makemonkey"]) in GLOB.mob_list
+			var/mob/living/carbon/human/H = locate(href_list["makemonkey"])
 			if(!istype(H))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
 				return
@@ -965,7 +965,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/human/H = locate(href_list["makerobot"]) in GLOB.mob_list
+			var/mob/living/carbon/human/H = locate(href_list["makerobot"])
 			if(!istype(H))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
 				return
@@ -981,7 +981,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/human/H = locate(href_list["makealien"]) in GLOB.mob_list
+			var/mob/living/carbon/human/H = locate(href_list["makealien"])
 			if(!istype(H))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
 				return
@@ -997,7 +997,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/human/H = locate(href_list["makeslime"]) in GLOB.mob_list
+			var/mob/living/carbon/human/H = locate(href_list["makeslime"])
 			if(!istype(H))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
 				return
@@ -1013,7 +1013,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/H = locate(href_list["makeai"]) in GLOB.mob_list
+			var/mob/living/carbon/H = locate(href_list["makeai"])
 			if(!istype(H))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon")
 				return
@@ -1029,7 +1029,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/human/H = locate(href_list["setspecies"]) in GLOB.mob_list
+			var/mob/living/carbon/human/H = locate(href_list["setspecies"])
 			if(!istype(H))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
 				return
@@ -1049,7 +1049,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/C = locate(href_list["editbodypart"]) in GLOB.mob_list
+			var/mob/living/carbon/C = locate(href_list["editbodypart"])
 			if(!istype(C))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon")
 				return
@@ -1095,7 +1095,7 @@
 			if(!check_rights(R_SPAWN))
 				return
 
-			var/mob/living/carbon/human/H = locate(href_list["purrbation"]) in GLOB.mob_list
+			var/mob/living/carbon/human/H = locate(href_list["purrbation"])
 			if(!istype(H))
 				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
 				return
@@ -1126,7 +1126,7 @@
 			if(!check_rights(0))
 				return
 
-			var/mob/living/L = locate(href_list["mobToDamage"]) in GLOB.mob_list
+			var/mob/living/L = locate(href_list["mobToDamage"])
 			if(!istype(L))
 				return
 

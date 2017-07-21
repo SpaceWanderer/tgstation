@@ -283,17 +283,13 @@
 			. = 1
 	..()
 
-/datum/reagent/toxin/chloralhydratedelayed
-	name = "Chloral Hydrate"
+/datum/reagent/toxin/chloralhydrate/delayed
 	id = "chloralhydrate2"
-	description = "A powerful sedative that induces confusion and drowsiness before putting its target to sleep."
-	reagent_state = SOLID
-	color = "#000067" // rgb: 0, 0, 103
-	toxpwr = 0
-	metabolization_rate = 1.5 * REAGENTS_METABOLISM
 
-/datum/reagent/toxin/chloralhydratedelayed/on_mob_life(mob/living/M)
+/datum/reagent/toxin/chloralhydrate/delayed/on_mob_life(mob/living/M)
 	switch(current_cycle)
+		if(1 to 10)
+			return
 		if(10 to 20)
 			M.confused += 1
 			M.drowsyness += 1

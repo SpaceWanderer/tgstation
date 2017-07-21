@@ -191,9 +191,7 @@ Difficulty: Medium
 		sleep(1)
 		if(QDELETED(src) || stat == DEAD) //we got hit and died, rip us
 			qdel(F)
-			if(stat == DEAD)
-				swooping &= ~SWOOP_DAMAGEABLE
-				animate(src, alpha = 255, transform = oldtransform, time = 0, flags = ANIMATION_END_NOW) //reset immediately
+			swooping &= ~SWOOP_DAMAGEABLE
 			return
 	animate(src, alpha = 100, transform = matrix()*0.7, time = 7)
 	swooping |= SWOOP_INVULNERABLE

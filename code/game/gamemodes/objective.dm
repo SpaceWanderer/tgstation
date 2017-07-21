@@ -240,8 +240,9 @@
 		return 0
 	if(issilicon(owner.current))
 		return 0
-	if(!SSshuttle.emergency.shuttle_areas[get_area(owner.current)])
+	if(SSshuttle.emergency.shuttle_areas[get_area(owner.current)])
 		return 0
+
 	return SSshuttle.emergency.is_hijacked()
 
 
@@ -603,7 +604,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 
 /datum/objective/capture/check_completion()//Basically runs through all the mobs in the area to determine how much they are worth.
 	var/captured_amount = 0
-	var/area/centcom/holding/A = locate() in GLOB.sortedAreas
+	var/area/centcom/holding/A = locate()
 	for(var/mob/living/carbon/human/M in A)//Humans.
 		if(M.stat==2)//Dead folks are worth less.
 			captured_amount+=0.5

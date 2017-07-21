@@ -96082,7 +96082,7 @@
 /area/science/test_area)
 "dDJ" = (
 /obj/machinery/doppler_array{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -26;
