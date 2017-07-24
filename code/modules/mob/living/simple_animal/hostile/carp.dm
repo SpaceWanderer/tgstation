@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/carp
-	name = "space carp"
-	desc = "A ferocious, fang-bearing creature that resembles a fish."
+	name = "space hohol"
+	desc = "A ferocious, fang-bearing creature that resembles a pig."
 	icon_state = "carp"
 	icon_living = "carp"
 	icon_dead = "carp_dead"
@@ -22,7 +22,7 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	attacktext = "bites"
-	attack_sound = 'sound/weapons/bite.ogg'
+	attack_sound = 'sound/weapons/pig_bite.ogg'
 	speak_emote = list("gnashes")
 
 	//Space carp aren't affected by cold.
